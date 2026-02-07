@@ -1,0 +1,46 @@
+# Build outputs
+**/bin/
+**/obj/
+artifacts/
+TestResults/
+*.log
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# JetBrains Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# MAUI / mobile build outputs
+*.apk
+*.aab
+*.ipa
+*.dSYM/
+.gradle/
+**/*-Signed.apk
+
+# Keys / signing (keep these out of git)
+*.keystore
+*.jks
+
+# Local env/secrets/config (adjust to your naming)
+.env
+appsettings.Development.json
+appsettings.Local.json
+
+# Local databases (if created in repo)
+*.db
+*.sqlite
+*.sqlite3
