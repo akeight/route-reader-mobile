@@ -16,13 +16,16 @@ Offline-first **route & meter-reading practice** app built with **.NET MAUI** (m
 - **Tests** project for unit/integration tests
 
 ## Repo Structure
+```
 src/
-RouteRead.Mobile/ # .NET MAUI app (UI + MVVM)
-RouteRead.Api/ # ASP.NET Core Minimal API
-RouteRead.Shared/ # Shared models/contracts/helpers
+├─ RouteRead.Mobile/   # .NET MAUI app (UI + MVVM)
+├─ RouteRead.Api/      # ASP.NET Core Minimal API
+└─ RouteRead.Shared/   # Shared models/contracts/helpers
 tests/
-RouteRead.Tests/ # Test project
+└─ RouteRead.Tests/    # Test project
 RouteRead.sln
+```
+
 
 
 ## Getting Started
@@ -50,31 +53,32 @@ RouteRead.sln
   ```
 
 - #### If you have multiple devices/emulators:
-````bash
-"$ANDROID_SDK_ROOT/platform-tools/adb" devices -l
-````
+  ````bash
+  "$ANDROID_SDK_ROOT/platform-tools/adb" devices -l
+  ````
 
 - #### Then:
-```bash
-dotnet build src/RouteRead.Mobile/RouteRead.Mobile.csproj -f net9.0-android -t:Run \
+  ```bash
+  dotnet build src/RouteRead.Mobile/RouteRead.Mobile.csproj -f net9.0-android -t:Run \
   -p:AndroidSdkDirectory="$ANDROID_SDK_ROOT" \
   -p:JavaSdkDirectory="$JAVA_HOME" \
   -p:AndroidDeviceSerial=emulator-5554
-```
+  ```
 
 ### 4) Run the API
-```bash
-dotnet run --project src/RouteRead.Api
-```
+  ```bash
+  dotnet run --project src/RouteRead.Api
+  ```
 
 ## Tests
-```bash
-dotnet test
-```
+  ```bash
+  dotnet test
+  ```
 
 ## Current MVP Milestones
 - [X] Milestone A — App boots + navigation works, Routes → Stops → Stop detail → enter reading
 - [ ] Milestone B — Local persistence (SQLite) for routes/stops/readings
 - [ ] Milestone C — Optional sync with API (pull routes/stops, push readings)
+
 
 
